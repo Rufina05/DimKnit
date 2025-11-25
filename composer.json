@@ -7,8 +7,19 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "blade-ui-kit/blade-icons": "^1.8",
+        "codeat3/blade-carbon-icons": "^2.37",
+        "codeat3/blade-eos-icons": "^1.15",
+        "codeat3/blade-memory-icons": "^1.1",
+        "codeat3/blade-mono-icons": "^1.5",
+        "davidhsianturi/blade-bootstrap-icons": "^2.1",
+        "hasnayeen/blade-eva-icons": "^2.1",
+        "khatabwedaa/blade-css-icons": "^1.5",
         "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "laravel/sanctum": "^4.0",
+        "laravel/tinker": "^2.10.1",
+        "livewire/livewire": "^3.6",
+        "troccoli/blade-health-icons": "^5.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
