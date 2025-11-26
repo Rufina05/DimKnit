@@ -17,17 +17,19 @@ class PageController extends Controller
 
     public function catalog(Request $request)
     {
-        $categories = Category::with("products")->get();
+        $categoryId = $request->get('category');
+        
+        $query = Product::with(['category', 'size']);
+        
+        if ($categoryId) {
+            $query->where('category_id', $categoryId);
+        }
+        
+        $products = $query->get();
+        $categories = Category::all();
         $sizes = Size::all();
-        $selectedCategory = $request->query('category');
-        $products = Product::all();
-
-        return view("catalog", [
-            "categories" => $categories,
-            "sizes" => $sizes,
-            "selectedCategory" => $selectedCategory,
-            "products" => $products
-        ]);
+        
+        return view("catalog", ["products" => $products, "selectedCategory" => $categoryId, "categories" => $categories, "sizes" => $sizes]);
     }
 
     public function contacts()

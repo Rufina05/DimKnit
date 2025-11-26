@@ -1,9 +1,8 @@
 <footer class="bg-black text-white mt-5 pt-20">
   <div class="max-w-7xl mx-auto pt-5 px-4 lg:px-8">
-    <!-- Grid Container -->
+  
     <div class="grid mt-5 grid-cols md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-      <!-- Socials Section -->
       <div class="space-y-5">
         <h3 class="text-lg font-bold">Connect with us</h3>
         <p class="text-gray-400">Follow us on social media</p>
@@ -13,14 +12,13 @@
           </a>
           <a href="#" class="hover:text-white text-2xl transition-colors duration-200">
             <x-bi-whatsapp /> 
-        </a>
+          </a>
           <a href="#" class="hover:text-white text-2xl transition-colors duration-200">
             <x-bi-telegram /> 
           </a>
         </div>
       </div>
 
-      <!-- Links Section -->
       <div class="space-y-5">
         <h3 class="text-lg font-bold">Quick Links</h3>
         <ul class="space-y-3 text-gray-400">
@@ -30,7 +28,6 @@
         </ul>
       </div>
 
-      <!-- Subscribe Section -->
       <div class="space-y-5">
         <h3 class="text-lg font-bold">Subscribe</h3>
         <p class="text-gray-400">Get 10% off your first order</p>
@@ -42,17 +39,14 @@
         </div>
       </div>
 
-      <!-- Contact Section -->
       <div class="space-y-5">
         <h3 class="text-lg font-bold">Contact Us</h3>
         <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur.</p>
         <p class="text-gray-400">dimknit@gmail.com</p>
         <p class="text-gray-400">+00000000000</p>
       </div>
-
     </div>
 
-    <!-- Footer Bottom -->
     <div class=" mt-12 text-center text-white/30 flex justify-center items-center py-6">
       <p>© 2025 DimKnit Store. All rights reserved.</p>
     </div>

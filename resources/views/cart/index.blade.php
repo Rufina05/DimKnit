@@ -4,7 +4,6 @@
 
 <div class="max-w-7xl mx-auto px-4 lg:px-8 my-8">
 
-    <!-- Breadcrumb -->
     <div class="text-sm lg:text-base text-gray-400 mb-6 mt-6 ml-2 lg:ml-4">
         <span>Home / Cart </span>
     </div>
@@ -19,10 +18,8 @@
         ]
     }" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-        <!-- LEFT COLUMN: Cart Items -->
         <div class="lg:col-span-8 space-y-4">
 
-            <!-- TABLE HEADER (Desktop Only) -->
             <div class="hidden md:grid grid-cols-12 gap-4 p-4 md:p-6 
                         shadow-[0_0_10px_#e5e5e5] rounded-lg bg-white font-medium text-sm md:text-base">
                 <div class="col-span-6">Product</div>
@@ -31,12 +28,10 @@
                 <div class="col-span-2 text-center">Subtotal</div>
             </div>
 
-            <!-- CART ITEMS -->
             @foreach($cart->cartItems as $index => $item)
             <div class="grid grid-cols-12 gap-4 p-4 md:p-6 bg-white 
                         shadow-[0_0_10px_#e5e5e5] rounded-lg items-center">
 
-                <!-- IMAGE + NAME -->
                 <div class="col-span-12 md:col-span-6 flex flex-col md:flex-row items-center md:items-center gap-3">
                     <img src="{{ asset('storage/products/' . $item->product->main_image) }}"
                          alt="{{ $item->product->name_en }}"
@@ -47,13 +42,11 @@
                     </p>
                 </div>
 
-                <!-- PRICE -->
                 <div class="col-span-6 md:col-span-2 flex justify-between md:justify-center items-center mt-2 md:mt-0">
                     <span class="md:hidden font-medium">Price:</span>
                     €{{ number_format($item->product->price, 2) }}
                 </div>
 
-                <!-- QUANTITY -->
                 <div class="col-span-6 md:col-span-2 flex justify-between md:justify-center items-center mt-2 md:mt-0">
                     <span class="md:hidden font-medium">Qty:</span>
                     <div class="flex border rounded-md overflow-hidden text-sm md:text-base">
@@ -69,13 +62,11 @@
                     </div>
                 </div>
 
-                <!-- SUBTOTAL -->
                 <div class="col-span-12 md:col-span-2 flex justify-between md:justify-center items-center mt-2 md:mt-0">
                     <span class="md:hidden font-medium">Subtotal:</span>
                     €<span x-text="(cart[{{ $index }}].price * cart[{{ $index }}].qty).toFixed(2)"></span>
                 </div>
 
-                <!-- REMOVE BUTTON -->
                 <div class="col-span-12 flex justify-end pt-2">
                     @livewire('remove-from-cart', ['productId' => $item->product->id], key('remove-'.$item->id))
                 </div>
@@ -83,7 +74,7 @@
             </div>
             @endforeach
 
-            <!-- Cart Actions -->
+            <!--Buttons -->
             <div class="flex flex-wrap gap-4 justify-between mt-4">
                 <a href="{{ route('catalog') }}" class="px-6 py-2 border rounded-md hover:bg-gray-100">
                     Return To Shop
@@ -95,7 +86,7 @@
 
         </div>
 
-        <!-- RIGHT COLUMN: Cart Summary -->
+        <!--Cart TOTAL -->
         <div class="lg:col-span-4">
 
             <div class="space-y-4 p-6 bg-white rounded-lg shadow-[0_0_10px_#e5e5e5]">

@@ -25,7 +25,7 @@ class RemoveFromCart extends Component
 
         if ($item) {
             $item->delete();
-            // Redirect to refresh the cart page (route name is 'cart')
+
             return redirect()->route('cart');
         }
     }

@@ -25,7 +25,7 @@ class RemoveFromHeart extends Component
 
         if ($item) {
             $item->delete();
-            // Redirect to refresh the heart page
+
             return redirect()->route('heart');
         }
     }

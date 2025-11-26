@@ -27,4 +27,3 @@ Route::get("/cart", [CartController::class, "index"])->middleware("auth")->name(
 Route::get("/heart", [HeartController::class, "index"])->middleware("auth")->name("heart");
 
 
-

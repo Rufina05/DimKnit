@@ -9,12 +9,19 @@ class ProductsCatalog extends Component
 {
     public $products;
     public $filters = [];
+    public $selectedCategory = null;
 
     protected $listeners = ['filtersUpdated' => 'updateFilters'];
 
-    public function mount($products)
+    public function mount($products, $selectedCategory = null)
     {
         $this->products = $products;
+        $this->selectedCategory = $selectedCategory;
+        
+        // Автоматически добавляем категорию в фильтры
+        if ($selectedCategory) {
+            $this->filters['categoryIds'] = [$selectedCategory];
+        }
     }
 
     public function updateFilters($filters)

@@ -10,49 +10,39 @@ use App\Models\CartItem;
 class AddToCart extends Component
 {
     public $productId;
+    public $showQuantitySelector = false; // Показывать ли счётчик
     public $quantity = 1;
-    public $showQuantitySelector = false; // Новый параметр
 
-    public function increment()
-    {
-        $this->quantity++;
-    }
-
-    public function decrement()
-    {
-        if ($this->quantity > 1) {
-            $this->quantity--;
-        }
-    }
-
-    public function addToCart()
+    // Добавление в корзину, quantity может быть передан из Alpine.js
+    public function addToCart($quantity = null)
     {
         $user = Auth::user();
         if (!$user) {
             return redirect()->route('login');
         }
 
+        // Если передано значение из Alpine.js — используем его
+        $qty = $quantity ? max(1, (int)$quantity) : max(1, (int)$this->quantity);
+
         $cart = Cart::firstOrCreate(['user_id' => $user->id]);
 
-        $item = CartItem::where('cart_id', $cart->id)
-            ->where('product_id', $this->productId)
-            ->first();
+        $cartItem = CartItem::where('cart_id', $cart->id)
+                            ->where('product_id', $this->productId)
+                            ->first();
 
-        if ($item) {
-            // Если селектор количества показан, добавляем выбранное количество
-            // Иначе добавляем только 1
-            $item->increment('quantity', $this->showQuantitySelector ? $this->quantity : 1);
+        if ($cartItem) {
+            $cartItem->increment('quantity', $qty);
         } else {
             CartItem::create([
                 'cart_id' => $cart->id,
                 'product_id' => $this->productId,
-                'quantity' => $this->showQuantitySelector ? $this->quantity : 1
+                'quantity' => $qty,
             ]);
         }
 
         $this->dispatch('cartUpdated');
-        
-        // Reset quantity after adding
+
+        // Если счётчик отображается на странице товара — можно сбросить
         if ($this->showQuantitySelector) {
             $this->quantity = 1;
         }

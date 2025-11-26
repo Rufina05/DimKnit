@@ -97,5 +97,7 @@ class Filters extends Component
             'removable_clothes' => false,
             'has_parts' => false,
         ]);
+
+        return redirect()->route('catalog');
     }
 }

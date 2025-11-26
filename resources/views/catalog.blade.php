@@ -20,7 +20,7 @@
 
         <!-- Products Right Column -->
         <main>
-            @livewire('products-catalog', ['products' => $products])
+             @livewire("products-catalog", ["products" => $products, "selectedCategory" => $selectedCategory ?? null])
         </main>
 
     </div>

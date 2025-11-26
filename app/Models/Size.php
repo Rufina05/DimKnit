@@ -20,7 +20,6 @@ class Size extends Model
         return $this->hasMany(Product::class);
     }
 
-    // Return a friendly name property that uses the English name by default
     public function getNameAttribute()
     {
         return $this->attributes['name_en'] ?? null;

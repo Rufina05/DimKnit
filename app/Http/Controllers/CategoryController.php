@@ -10,10 +10,8 @@ class CategoryController extends Controller
 {
     public function show($slug)
     {
-        $category = Category::where('slug_en', $slug)->with("products")->firstOrFail();
-
-        return view('categories.show', ["category" => $category]);
-
+        $category = Category::where('slug_en', $slug)->firstOrFail();
+        
+        return redirect()->route('catalog', ['category' => $category->id]);
     }
-
 }
