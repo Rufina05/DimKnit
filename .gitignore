@@ -29,3 +29,7 @@ Thumbs.db
 !/storage/app/public
 /storage/app/public/*
 !/storage/app/public/products
+!/storage/app/public/banners
+!/storage/app/public/categories
+!/storage/app/public/comingsoon
+
