@@ -10,10 +10,9 @@ use App\Models\CartItem;
 class AddToCart extends Component
 {
     public $productId;
-    public $showQuantitySelector = false; // Показывать ли счётчик
+    public $showQuantitySelector = false; 
     public $quantity = 1;
 
-    // Добавление в корзину, quantity может быть передан из Alpine.js
     public function addToCart($quantity = null)
     {
         $user = Auth::user();
@@ -21,7 +20,6 @@ class AddToCart extends Component
             return redirect()->route('login');
         }
 
-        // Если передано значение из Alpine.js — используем его
         $qty = $quantity ? max(1, (int)$quantity) : max(1, (int)$this->quantity);
 
         $cart = Cart::firstOrCreate(['user_id' => $user->id]);
@@ -42,7 +40,6 @@ class AddToCart extends Component
 
         $this->dispatch('cartUpdated');
 
-        // Если счётчик отображается на странице товара — можно сбросить
         if ($this->showQuantitySelector) {
             $this->quantity = 1;
         }

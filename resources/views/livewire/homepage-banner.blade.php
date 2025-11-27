@@ -1,4 +1,4 @@
-<section class="pt-10 rounded-xl mb-[10px] bg-white">
+<section class="pt-10 rounded-xl mb-2.5 bg-white">
   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 sm:grid-cols-2 items-stretch gap-8 sm:gap-12 min-h-[80vh]">
 

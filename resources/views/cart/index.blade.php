@@ -15,8 +15,7 @@
             @foreach($cart->cartItems as $item)
                 { price: {{ $item->product->price }}, qty: {{ $item->quantity }} },
             @endforeach
-        ]
-    }" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            ]}" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
         <div class="lg:col-span-8 space-y-4">
 

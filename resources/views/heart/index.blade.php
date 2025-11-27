@@ -19,7 +19,7 @@
 
                         <div class="bg-white rounded-md shadow-md overflow-hidden group">
 
-                            <div class="relative bg-gray-100 h-[350px] sm:h-[350px] md:h-[320px] lg:h-[280px] flex justify-center items-center overflow-hidden">
+                            <div class="relative bg-gray-100 h-[350px] sm:h-[350px] md:h-80 lg:h-[280px] flex justify-center items-center overflow-hidden">
 
                                 <a href="{{ route('show-product', $item->product->slug_en) }}" wire:navigate class="block w-full h-full">
                                     <img src="{{ asset('storage/products/' . $item->product->main_image) }}"
@@ -34,7 +34,6 @@
                                         key('cart-catalog'.$item->id))
                                 </div>
 
-                                <!-- ❗ Вот здесь вставляем компонент удаления -->
                                 <div class="absolute top-3 right-3 z-20">
                                     @livewire('remove-from-heart', ['productId' => $item->product->id], key('remove-'.$item->id))
                                 </div>

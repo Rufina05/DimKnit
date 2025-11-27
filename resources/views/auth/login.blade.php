@@ -13,7 +13,7 @@
              class="w-full h-full object-cover object-center">
       </div>
 
-      <!-- Form Panel -->
+      <!-- Form -->
       <div class="flex items-start justify-center p-6 sm:p-12 lg:p-16 bg-gray-50">
         <div class="w-full max-w-xl bg-white rounded-2xl p-8 sm:p-12 mt-16">
 

@@ -21,6 +21,6 @@
       @endforeach
     </div>
 
-    <div class="h-[1px] mt-8 w-full bg-slate-200"></div>
+    <div class="h-px mt-8 w-full bg-slate-200"></div>
   </div>
 </section>

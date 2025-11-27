@@ -11,6 +11,7 @@
 
     @livewireStyles
 </head>
+
 <body class="bg-gray-50">
     @livewire('header')
 
@@ -22,4 +23,5 @@
 
     @livewireScripts
 </body>
+
 </html>

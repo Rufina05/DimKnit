@@ -18,7 +18,6 @@ class ProductsCatalog extends Component
         $this->products = $products;
         $this->selectedCategory = $selectedCategory;
         
-        // Автоматически добавляем категорию в фильтры
         if ($selectedCategory) {
             $this->filters['categoryIds'] = [$selectedCategory];
         }

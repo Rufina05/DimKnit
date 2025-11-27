@@ -4,7 +4,7 @@
             <div class="bg-white rounded-md shadow-md overflow-hidden group relative">
 
                 <div class="relative bg-gray-100 
-                            h-[350px] sm:h-[350px] md:h-[320px] lg:h-[280px]
+                            h-[350px] sm:h-[350px] md:h-80 lg:h-[280px]
                             flex justify-center items-center overflow-hidden">
 
                     <a href="{{ route('show-product', $product->slug_en) }}" class="block w-full h-full">

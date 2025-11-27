@@ -42,7 +42,6 @@
                 </nav>
 
                 <div class="hidden lg:flex items-center gap-6">
-                    <!-- Search Container with relative positioning -->
                     <div class="relative">
                         <div class="flex items-center gap-2 p-2.5 rounded-md bg-gray-100">
                             <input id="search" type="text" placeholder="Search..." class="text-black/60 text-sm px-3 py-1.5 bg-gray-100 focus:outline-none w-64">
@@ -50,7 +49,7 @@
                                 <x-eva-search class="w-6 h-6" />
                             </button>
                         </div>
-                        <!-- Search Results Dropdown -->
+                        <!-- Search Results-->
                         <div id="search-results" class="hidden absolute top-full mt-2 left-0 right-0 bg-white border border-gray-200 rounded-lg shadow-lg max-h-[400px] overflow-y-auto z-50 p-2">
                         </div>
                     </div>
@@ -101,7 +100,7 @@
                        class="text-base font-medium text-gray-900 hover:text-red-900">
                        Contacts
                     </a>
-                    <!-- Mobile Search with relative positioning -->
+                    <!-- Mobile Search -->
                     <div class="relative">
                         <div class="flex items-center gap-2 p-3 bg-gray-100 rounded-xl">
                             <input id="search-mobile" type="text" placeholder="Search..." class="w-full text-sm text-black/60 px-3 py-2 rounded-md bg-gray-100 focus:outline-none">

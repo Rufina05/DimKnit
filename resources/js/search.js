@@ -1,13 +1,10 @@
-// Desktop search elements
 const searchInput = document.querySelector("#search");
 const searchResults = document.querySelector("#search-results");
 const searchBtn = document.querySelector("#search-btn");
 
-// Mobile search elements
 const searchInputMobile = document.querySelector("#search-mobile");
 const searchResultsMobile = document.querySelector("#search-results-mobile");
 
-// Helper function to fetch and show results
 function showResults(inputElement, resultsElement) {
     const query = inputElement.value.trim();
 
@@ -66,18 +63,12 @@ function showResults(inputElement, resultsElement) {
     }
 }
 
-// ======================
-// Desktop: only button click
-// ======================
 if (searchBtn && searchInput && searchResults) {
     searchBtn.addEventListener("click", () => {
         showResults(searchInput, searchResults);
     });
 }
 
-// ======================
-// Mobile: only button click
-// ======================
 const searchBtnMobile = document.querySelector("#search-btn-mobile");
 if (searchBtnMobile && searchInputMobile && searchResultsMobile) {
     searchBtnMobile.addEventListener("click", () => {
@@ -85,9 +76,7 @@ if (searchBtnMobile && searchInputMobile && searchResultsMobile) {
     });
 }
 
-// ======================
-// Close results when clicking outside
-// ======================
+// Closing results (click space)
 document.addEventListener("click", e => {
     if (searchInput && searchResults &&
         !searchInput.contains(e.target) &&
