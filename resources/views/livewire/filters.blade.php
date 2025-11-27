@@ -1,4 +1,4 @@
-<div class="bg-white p-6 rounded-lg shadow-md sticky top-8 ">
+<div class="bg-white p-6 rounded-lg shadow-md lg:sticky lg:top-8">
 
     <!-- Category -->
     <div class="mb-6">
@@ -48,4 +48,5 @@
             class="w-full border border-red-900 text-red-900 py-2 rounded-md hover:bg-red-900 hover:text-white transition duration-200">
         Reset All Filters
     </button>
+
 </div>

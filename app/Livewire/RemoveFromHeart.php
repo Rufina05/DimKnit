@@ -12,23 +12,25 @@ class RemoveFromHeart extends Component
     public $productId;
 
     public function removeFromHeart()
-    {
-        $user = Auth::user();
-        if (!$user) return;
+{
+    $user = Auth::user();
+    if (!$user) return;
 
-        $heart = Heart::where('user_id', $user->id)->first();
-        if (!$heart) return;
+    $heart = Heart::where('user_id', $user->id)->first();
+    if (!$heart) return;
 
-        $item = HeartItem::where('heart_id', $heart->id)
-                        ->where('product_id', $this->productId)
-                        ->first();
+    $item = HeartItem::where('heart_id', $heart->id)
+                     ->where('product_id', $this->productId)
+                     ->first();
 
-        if ($item) {
-            $item->delete();
+    if ($item) {
+        $item->delete();
 
-            return redirect()->route('heart');
-        }
+        return redirect()->route('heart');
     }
+}
+
+
     public function render()
     {
         return view('livewire.remove-from-heart');

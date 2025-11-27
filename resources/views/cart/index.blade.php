@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="col-span-6 md:col-span-2 flex justify-between md:justify-center items-center mt-2 md:mt-0">
-                    <span class="md:hidden font-medium">Qty:</span>
+                    <span class="md:hidden font-small"></span>
                     <div class="flex border rounded-md overflow-hidden text-sm md:text-base">
                         <button class="px-3 py-2 hover:bg-gray-100"
                             x-on:click="if(cart[{{ $index }}].qty > 1) cart[{{ $index }}].qty--">-</button>
@@ -76,10 +76,10 @@
 
             <!--Buttons -->
             <div class="flex flex-wrap gap-4 justify-between mt-4">
-                <a href="{{ route('catalog') }}" class="px-6 py-2 border rounded-md hover:bg-gray-100">
+                <a href="{{ route('catalog') }}" wire:navigate class="px-6 py-2 border rounded-md hover:bg-gray-100">
                     Return To Shop
                 </a>
-                <a href="{{ route('cart') }}" class="px-6 py-2 border rounded-md hover:bg-gray-100">
+                <a href="{{ route('cart') }}"  wire:navigate class="px-6 py-2 border rounded-md hover:bg-gray-100">
                     Update Cart
                 </a>
             </div>

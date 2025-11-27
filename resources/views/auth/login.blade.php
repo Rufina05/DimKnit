@@ -37,7 +37,7 @@
             </div>
 
             <div class="flex flex-col justify-start mt-4">
-              <button type="submit" wire:navigate class="inline-block px-10 sm:px-12 md:px-16 bg-red-500 hover:bg-red-700 text-white py-4 sm:py-5 text-base sm:text-lg md:text-xl font-bold rounded-md transition duration-300">
+              <button type="submit" class="inline-block px-10 sm:px-12 md:px-16 bg-red-500 hover:bg-red-700 text-white py-4 sm:py-5 text-base sm:text-lg md:text-xl font-bold rounded-md transition duration-300">
                 Login
               </button>
             </div>
