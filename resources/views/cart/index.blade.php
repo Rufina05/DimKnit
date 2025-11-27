@@ -99,14 +99,14 @@
                         <span>€<span x-text="cart.reduce((sum, i) => sum + i.price * i.qty, 0).toFixed(2)"></span></span>
                     </div>
 
-                    <div class="h-[1px] mt-2 w-full bg-slate-200"></div>
+                    <div class="h-px mt-2 w-full bg-slate-200"></div>
 
                     <div class="flex justify-between">
                         <span>Shipping:</span>
                         <span>Free</span>
                     </div>
 
-                    <div class="h-[1px] mt-2 w-full bg-slate-200"></div>
+                    <div class="h-px mt-2 w-full bg-slate-200"></div>
 
                     <div class="flex justify-between font-bold text-base md:text-lg">
                         <span>Total:</span>

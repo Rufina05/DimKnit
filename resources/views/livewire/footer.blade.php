@@ -31,7 +31,7 @@
       <div class="space-y-5">
         <h3 class="text-lg font-bold">Subscribe</h3>
         <p class="text-gray-400">Get 10% off your first order</p>
-        <div class="flex items-center gap-2 rounded-md border-[1px] border-gray-500 bg-black text-white">
+        <div class="flex items-center gap-2 rounded-md border border-gray-500 bg-black text-white">
           <input type="email" placeholder="Enter your email" class=" w-full p-2 px-4 placeholder-gray-400 rounded-full bg-black">
           <button class="text-gray-400 hover:text-white px-4 py-2 rounded-lg flex justify-center items-center">
             <x-bi-telegram  class="text-lg hover:scale-105 duration-200" />
