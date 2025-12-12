@@ -9,13 +9,13 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6 flex flex-col justify-center">
                 <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-                    About Us
+                    {{ __('text.about-us') }}
                 </h1>
                 <p class="text-gray-700 leading-relaxed">
-                    Welcome to our handmade crochet toy studio! We create only crochet toys — soft, charming, and full of character. Every toy is lovingly made by hand, stitch by stitch, using high-quality yarn and thoughtful details to bring warmth, comfort, and joy to both children and adults.
+                   {{ __('text.about-p1') }} 
                 </p>
                 <p class="text-gray-700 leading-relaxed">
-                    Our mission is to share the magic of handmade craft and to create meaningful keepsakes that carry warmth, love, and a piece of the creative world we are a part of. Thank you for supporting slow craft and independent makers. Every toy is made with heart, imagination, and a passion for crochet — just for you. Made stitch by stitch. Made with love. Made for your smiles.
+                    {{ __('text.about-p2') }}
                 </p>
             </div>
             <div>
@@ -30,7 +30,7 @@
 <!-- CONTACTS -->
 <section class="pt-8 pb-16">
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center lg:text-left">Contact Us</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center lg:text-left">{{ __('text.contact-us') }}</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 items-start">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -39,9 +39,9 @@
                         <div class="h-10 w-10 flex justify-center items-center bg-red-500 text-white rounded-full">
                             <x-eva-phone-outline class="text-xl md:text-2xl" />
                         </div>
-                        <h4 class="text-lg md:text-xl font-bold">Call To Us</h4>
+                        <h4 class="text-lg md:text-xl font-bold">{{ __('text.call-to-us') }}</h4>
                     </div>
-                    <p class="text-gray-600 text-sm md:text-base">We are available 24/7, 7 days a week.</p>
+                    <p class="text-gray-600 text-sm md:text-base">{{ __('text.contact-message') }}</p>
                     <p class="text-gray-600 font-semibold text-sm md:text-base">WhatsApp: +000000000</p>
                     <p class="text-gray-600 font-semibold text-sm md:text-base">Viber: +000000000</p>
                     <p class="text-gray-600 font-semibold text-sm md:text-base">Telegram: +000000000</p>
@@ -51,9 +51,9 @@
                         <div class="h-10 w-10 flex justify-center items-center bg-red-500 text-white rounded-full">
                             <x-bi-envelope class="text-xl md:text-2xl" />
                         </div>
-                        <h4 class="text-lg md:text-xl font-bold">Email Us</h4>
+                        <h4 class="text-lg md:text-xl font-bold">{{ __('text.email-us') }}</h4>
                     </div>
-                    <p class="text-gray-600 text-sm md:text-base">Fill out our form and we will contact you within 24 hours.</p>
+                    <p class="text-gray-600 text-sm md:text-base">{{ __('text.email-message') }}</p>
                     <p class="text-gray-600 font-semibold text-sm md:text-base">dimknit@gmail.com</p>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                     <div class="flex justify-end">
                         <button type="submit"
                                 class="w-full sm:w-auto bg-red-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-md hover:bg-red-600 transition-colors text-sm md:text-base">
-                            Send Message
+                            {{ __('text.send-message') }}
                         </button>
                     </div>
                 </form>

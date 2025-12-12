@@ -10,8 +10,14 @@ class ProductsCatalog extends Component
     public $products;
     public $filters = [];
     public $selectedCategory = null;
+    public $selectedProductId = null;
 
-    protected $listeners = ['filtersUpdated' => 'updateFilters'];
+    protected $listeners = ['filtersUpdated' => 'updateFilters', 'openEditModal' => 'openModal' ];
+
+    public function openModal($id)
+    {
+        $this->selectedProductId = $id;
+    }
 
     public function mount($products, $selectedCategory = null)
     {

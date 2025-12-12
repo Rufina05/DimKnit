@@ -24,4 +24,16 @@ class Category extends Model
     {
         return $this->hasMany(Product::class);
     }
+    
+    public function getNameAttribute()
+    {
+        $locale = app()->getLocale();
+        return $this->{'name_' . $locale} ?? $this->name_en;
+    }
+
+    public function getSlugAttribute()
+    {
+        $locale = app()->getLocale();
+        return $this->{'slug_' . $locale} ?? $this->slug_en;
+    }
 }

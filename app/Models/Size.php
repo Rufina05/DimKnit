@@ -22,6 +22,7 @@ class Size extends Model
 
     public function getNameAttribute()
     {
-        return $this->attributes['name_en'] ?? null;
+        $locale = app()->getLocale();
+        return $this->{'name_' . $locale} ?? $this->name_en;
     }
 }

@@ -7,8 +7,8 @@
             </div>
         </div>
         <div class="space-y-1">
-            <p class="text-lg font-bold">FREE AND FAST DELIVERY</p>
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text-lg font-bold">{{ __('text.guarantee-h-1') }}</p>
+            <p class="text-gray-600">{{ __('text.guarantee-p-1') }}</p>
         </div>
     </div>
 
@@ -19,8 +19,8 @@
             </div>
         </div>
         <div class="space-y-1">
-            <p class="text-lg font-bold">BEST GIFT IDEAS</p>
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text-lg font-bold">{{ __('text.guarantee-h-2') }}</p>
+            <p class="text-gray-600">{{ __('text.guarantee-p-2') }}</p>
         </div>
     </div>
 
@@ -31,8 +31,8 @@
             </div>
         </div>
         <div class="space-y-1">
-            <p class="text-lg font-bold">YOUR STYLE OF TOYS</p>
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p class="text-lg font-bold">{{ __('text.guarantee-h-3') }}</p>
+            <p class="text-gray-600">{{ __('text.guarantee-p-3') }}</p>
         </div>
     </div>
 

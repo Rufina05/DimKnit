@@ -1,13 +1,13 @@
 @extends ("layout")
 
 @section("main")
-    <p>{{ $category['name_en'] }}</p>
+    <p>{{ $category['name'] }}</p>
 
     @foreach ($category->products as $product)
-        <a href="{{ route('show-product', ['slug' => $product->slug_en]) }}" wire:navigate>
+        <a href="{{ route('show-product', ['slug' => $product->slug]) }}" wire:navigate>
         <div>
-            <img style="height: 100px;" src="{{ asset('storage/' . $product->main_image) }}" alt="{{ $product->name_en }}">
-            <p>{{ $product->name_en }}</p>
+            <img style="height: 100px;" src="{{ asset('storage/' . $product->main_image) }}" alt="{{ $product->name }}">
+            <p>{{ $product->name }}</p>
         </div>
         </a>
        

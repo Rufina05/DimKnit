@@ -17,8 +17,8 @@
         <div class="w-full max-w-xl bg-white rounded-2xl p-8 sm:p-12 mt-16">
 
           <div class="mb-8 text-left"> 
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black uppercase tracking-wide">Create Account</h2>
-            <p class="text-gray-500 mt-2 text-sm sm:text-base md:text-lg">Fill the form to register</p>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black uppercase tracking-wide">{{ __('text.create-account') }}</h2>
+            <p class="text-gray-500 mt-2 text-sm sm:text-base md:text-lg">{{ __('text.fill-the-form') }}</p>
           </div>
 
           <form action="{{ route('register.post') }}" method="POST" class="space-y-8">
@@ -48,14 +48,14 @@
             </div>
 
             <div class="flex flex-col justify-start mt-4">
-              <button type="submit" wire:navigate class="inline-block px-10 sm:px-12 md:px-16 bg-red-500 hover:bg-red-700 text-white py-4 sm:py-5 text-base sm:text-lg md:text-xl font-bold rounded-md transition duration-300">
-                Register
+              <button type="submit" class="inline-block px-10 sm:px-12 md:px-16 bg-red-500 hover:bg-red-700 text-white py-4 sm:py-5 text-base sm:text-lg md:text-xl font-bold rounded-md transition duration-300">
+                {{ __('text.register') }}
               </button>
             </div>
 
             <p class="text-left text-gray-500 mt-4 text-sm sm:text-base">
-              Already have an account? 
-              <a href="{{ route('login') }}" wire:navigate class="text-red-600 font-semibold hover:underline">Login</a>
+              {{ __('text.already-have-account') }} 
+              <a href="{{ route('login') }}" wire:navigate class="text-red-600 font-semibold hover:underline">{{ __('text.login') }}</a>
             </p>
           </form>
 

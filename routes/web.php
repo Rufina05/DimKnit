@@ -8,6 +8,7 @@ use App\Http\Controllers\SizeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HeartController;
+use App\Http\Controllers\AdminController;
 
 Route::get("/", [PageController::class, "home"])->name("home");
 Route::get("/catalog", [PageController::class, "catalog"])->name("catalog");
@@ -25,5 +26,14 @@ Route::get("/account", [AuthController::class, "account"])->middleware("auth")->
 
 Route::get("/cart", [CartController::class, "index"])->middleware("auth")->name("cart");
 Route::get("/heart", [HeartController::class, "index"])->middleware("auth")->name("heart");
+
+Route::get('/admin', [AdminController::class, 'index'])
+    ->middleware(['auth', 'isAdmin'])
+    ->name('admin.index');
+Route::get('/test', function () {
+    return view('test');
+});
+
+
 
 

@@ -10,8 +10,11 @@ class CategoryController extends Controller
 {
     public function show($slug)
     {
-        $category = Category::where('slug_en', $slug)->firstOrFail();
-        
+        $locale = app()->getLocale();
+        $column = 'slug_' . $locale;
+
+        $category = Category::where($column, $slug)->firstOrFail();
+
         return redirect()->route('catalog', ['category' => $category->id]);
     }
 }

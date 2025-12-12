@@ -1,0 +1,1 @@
+<livewire:language.language-selector />

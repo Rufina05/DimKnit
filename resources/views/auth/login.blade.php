@@ -18,8 +18,8 @@
         <div class="w-full max-w-xl bg-white rounded-2xl p-8 sm:p-12 mt-16">
 
           <div class="mb-8 text-left"> 
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black uppercase tracking-wide">Log in to Dimknit</h2>
-            <p class="text-gray-500 mt-2 text-sm sm:text-base md:text-lg">Enter your details here</p>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-black uppercase tracking-wide">{{ __('text.login to') }} Dimknit</h2>
+            <p class="text-gray-500 mt-2 text-sm sm:text-base md:text-lg">{{ __('text.enter-details') }}</p>
           </div>
 
           <form action="{{ route('login.post') }}" method="POST" class="space-y-8">
@@ -38,13 +38,13 @@
 
             <div class="flex flex-col justify-start mt-4">
               <button type="submit" class="inline-block px-10 sm:px-12 md:px-16 bg-red-500 hover:bg-red-700 text-white py-4 sm:py-5 text-base sm:text-lg md:text-xl font-bold rounded-md transition duration-300">
-                Login
+                {{ __('text.login') }}
               </button>
             </div>
 
             <p class="text-left text-gray-500 mt-4 text-sm sm:text-base">
-              Don't have an account? 
-              <a href="{{ route('register') }}" wire:navigate class="text-red-600 font-semibold hover:underline">Register</a>
+              {{ __('text.dont-have-account') }}
+              <a href="{{ route('register') }}" wire:navigate class="text-red-600 font-semibold hover:underline">{{ __('text.register') }}</a>
             </p>
           </form>
 

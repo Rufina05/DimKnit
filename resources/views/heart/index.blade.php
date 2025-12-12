@@ -9,7 +9,7 @@
 
                 <div class="flex justify-between items-center pt-5">
                     <p class="text-black text-3xl">
-                        Wishlist ({{ $heart->heartItems->count() }})
+                        {{ __('text.wishlist') }} ({{ $heart->heartItems->count() }})
                     </p>
                 </div>
 
@@ -21,9 +21,9 @@
 
                             <div class="relative bg-gray-100 h-[350px] sm:h-[350px] md:h-80 lg:h-[280px] flex justify-center items-center overflow-hidden">
 
-                                <a href="{{ route('show-product', $item->product->slug_en) }}" wire:navigate class="block w-full h-full">
-                                    <img src="{{ asset('storage/products/' . $item->product->main_image) }}"
-                                         alt="{{ $item->product->name_en }}"
+                                <a href="{{ route('show-product', $item->product->slug) }}" wire:navigate class="block w-full h-full">
+                                    <img src="{{ asset('storage/' . $item->product->main_image) }}"
+                                         alt="{{ $item->product->name }}"
                                          class="object-contain w-full h-full">
                                 </a>
 

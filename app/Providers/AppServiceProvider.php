@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // Register Livewire component explicitly in case auto-discovery misses it
-
+        $locale = session('locale', config('app.locale'));
+        app()->setLocale(session('locale', 'en'));
     }
 }

@@ -4,24 +4,24 @@
 
       <div class="flex flex-col justify-center text-center lg:text-left space-y-6 lg:space-y-8">
         <p class="text-base font-semibold tracking-wider text-red-900 uppercase">
-          Best gift ideas
+          {{ __('text.gift-ideas') }}
         </p>
 
         <h1 class="text-4xl font-bold text-black sm:text-5xl md:text-6xl xl:text-7xl">
-          Welcome to DimKnit
+          {{ __('text.welcome-to') }} DimKnit
         </h1>
 
         <p class="text-base text-black sm:text-lg md:text-xl">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, quod.
+          {{ __('text.p-message') }}
         </p>
 
         <a href="{{ route('catalog') }}" wire:navigate class="inline-flex items-center px-6 py-4 font-semibold text-white bg-red-900 rounded-full hover:text-red-200 focus:text-red-200 w-max transition-colors duration-200"role="button">
-          Shop Now
+          {{ __('text.shop-now') }}
           <x-bi-arrow-right-circle class="w-6 h-6 ml-2" />
         </a>
         <p class="text-gray-600">
-          Do you want to buy something? 
-          <a href="{{ route('login') }}" wire:navigate class="text-black font-semibold hover:underline">Sign up now</a>
+          '{{ __('text.do-you-want-to-by') }}'
+          <a href="{{ route('login') }}" wire:navigate class="text-black font-semibold hover:underline">{{ __('text.sign-up-now') }}</a>
         </p>
       </div>
 
