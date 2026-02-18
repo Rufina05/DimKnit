@@ -87,6 +87,7 @@ class EditProduct extends Component
             'description_en', 'description_ru', 'description_ro', 'description_ee',
             'price', 'category_id', 'size_id', 'main_image', 'currentImage'
         ]);
+        return redirect()->back();
     }
 
     #[On('edit-product')]

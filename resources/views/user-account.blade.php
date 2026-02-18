@@ -41,7 +41,7 @@
 
         <!-- Кнопка Logout -->
         <div class="flex justify-center">
-            <form id="logout-form" action="{{ route('home') }}" method="POST" class="inline">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="inline">
                 @csrf
                 <button 
                     type="submit"
@@ -50,6 +50,7 @@
                     {{ __('text.logout') }}
                 </button>
             </form>
+
         </div>
 
     </div>
